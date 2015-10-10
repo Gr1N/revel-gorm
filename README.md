@@ -38,9 +38,9 @@ Specifies the data source name of your database/sql database.
 
     gorm.max_idle_conns = 10
 
-### gorm.max_opem_conns
+### gorm.max_open_conns
 
-    gorm.max_opem_conns = 100
+    gorm.max_open_conns = 100
 
 ### gorm.singular_table
 
