@@ -1,6 +1,6 @@
 # revel-gorm
 
-GORM integration module for [revel](https://revel.github.io) framework.
+[GORM](https://github.com/jinzhu/gorm) integration module for [Revel](https://revel.github.io) framework.
 
 # Getting Started
 
