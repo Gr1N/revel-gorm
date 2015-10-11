@@ -10,7 +10,11 @@
 
 ## Documentation
 
-TBD
+[![GoDoc](https://godoc.org/github.com/Gr1N/revel-gorm?status.svg)](https://godoc.org/github.com/Gr1N/revel-gorm)
+
+`go doc` format documentation for this project can be viewed online without
+installing the package by using the GoDoc page at:
+http://godoc.org/github.com/Gr1N/revel-gorm
 
 ## Configuration
 
@@ -107,7 +111,8 @@ And embed the `gorm.TransactionalController` on your custom controller:
 
 # TODO
 
-- [ ] Documentation
+- [x] Documentation
+— [ ] Sample application
 - [ ] Tests
 - [ ] ...
 
