@@ -2,6 +2,8 @@
 
 [GORM](https://github.com/jinzhu/gorm) integration module for [Revel](https://revel.github.io) framework.
 
+[![Code Climate](https://codeclimate.com/github/Gr1N/revel-gorm/badges/gpa.svg)](https://codeclimate.com/github/Gr1N/revel-gorm)
+
 # Getting Started
 
 ## Install
