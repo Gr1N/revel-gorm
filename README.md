@@ -112,7 +112,7 @@ And embed the `gorm.TransactionalController` on your custom controller:
 # TODO
 
 - [x] Documentation
-— [ ] Sample application
+- [ ] Sample application
 - [ ] Tests
 - [ ] ...
 
