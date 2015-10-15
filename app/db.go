@@ -2,8 +2,6 @@ package app
 
 import (
 	"github.com/jinzhu/gorm"
-	_ "github.com/lib/pq"
-	_ "github.com/mattn/go-sqlite3"
 
 	"github.com/revel/revel"
 )
@@ -20,17 +18,17 @@ func InitDB() *gorm.DB {
 	)
 
 	// Read configuration
-	if driver, found = revel.Config.String("gorm.driver"); !found {
-		revel.ERROR.Fatal("No gorm.driver found.")
+	if driver, found = revel.Config.String("db.driver"); !found {
+		revel.ERROR.Fatal("No db.driver found.")
 	}
-	if spec, found = revel.Config.String("gorm.spec"); !found {
-		revel.ERROR.Fatal("No gorm.spec found.")
+	if spec, found = revel.Config.String("db.spec"); !found {
+		revel.ERROR.Fatal("No db.spec found.")
 	}
 
-	maxIdleConns := revel.Config.IntDefault("gorm.max_idle_conns", 10)
-	maxOpenConns := revel.Config.IntDefault("gorm.max_open_conns", 100)
-	singularTable := revel.Config.BoolDefault("gorm.singular_table", false)
-	logMode := revel.Config.BoolDefault("gorm.log_mode", false)
+	maxIdleConns := revel.Config.IntDefault("db.max_idle_conns", 10)
+	maxOpenConns := revel.Config.IntDefault("db.max_open_conns", 100)
+	singularTable := revel.Config.BoolDefault("db.singular_table", false)
+	logMode := revel.Config.BoolDefault("db.log_mode", false)
 
 	// Initialize `gorm`
 	dbm, err := gorm.Open(driver, spec)

@@ -22,41 +22,47 @@ http://godoc.org/github.com/Gr1N/revel-gorm
 
 Settings can be configured via the following directives in app.conf.
 
-### module.gorm
+### module.db
 
-    module.gorm = github.com/Gr1N/revel-gorm
+    module.db = github.com/Gr1N/revel-gorm
 
 Please review the documentation at [Revel — Modules — Overview](http://revel.github.io/manual/modules.html) for more information.
 
-### gorm.driver
+### db.import
 
-    gorm.driver = postgres
+    db.import = github.com/lib/pq
+
+Golang DB driver.
+
+### db.driver
+
+    db.driver = postgres
 
 Specifies the name of the database/sql driver.
 
-### gorm.spec
+### db.spec
 
-    gorm.spec = "user=username dbname=databasename sslmode=disable"
+    db.spec = "user=username dbname=databasename sslmode=disable"
 
 Specifies the data source name of your database/sql database.
 
-### gorm.max_idle_conns
+### db.max_idle_conns
 
-    gorm.max_idle_conns = 10
+    db.max_idle_conns = 10
 
-### gorm.max_open_conns
+### db.max_open_conns
 
-    gorm.max_open_conns = 100
+    db.max_open_conns = 100
 
-### gorm.singular_table
+### db.singular_table
 
-    gorm.singular_table = false
+    db.singular_table = false
 
 Please review the documentation at [GORM — Conventions](https://github.com/jinzhu/gorm#conventions).
 
-### gorm.log_mode
+### db.log_mode
 
-    gorm.log_mode = false
+    db.log_mode = false
 
 Please review the documentation at [GORM — Logger](https://github.com/jinzhu/gorm#logger).
 
