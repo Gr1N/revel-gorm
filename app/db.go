@@ -43,6 +43,7 @@ func InitDB() *gorm.DB {
 	dbm.DB().SetMaxOpenConns(maxOpenConns)
 	dbm.SingularTable(singularTable)
 	dbm.LogMode(logMode)
+	dbm.SetLogger(gorm.Logger{revel.INFO})
 
 	return &dbm
 }
