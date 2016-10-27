@@ -36,7 +36,7 @@ func InitDB() *gorm.DB {
 		revel.ERROR.Fatal(err)
 	}
 
-	DB = &dbm
+	DB = dbm
 
 	dbm.DB().Ping()
 	dbm.DB().SetMaxIdleConns(maxIdleConns)
@@ -45,5 +45,5 @@ func InitDB() *gorm.DB {
 	dbm.LogMode(logMode)
 	dbm.SetLogger(gorm.Logger{revel.INFO})
 
-	return &dbm
+	return dbm
 }
